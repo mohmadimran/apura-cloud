@@ -1,5 +1,7 @@
 "use client";
 
+import Button from "./Button";
+
 export default function ProductCard({
   title,
   subTitle,
@@ -34,15 +36,19 @@ export default function ProductCard({
       `}
     >
       <div>
-        <h3 className="text-[28px] md:text-[30px] font-[400] text-[#406354]">{title}</h3>
-        <h4 className="text-[28px] my-4 md:text-[30px] font-[600] text-[#242424]">{subTitle}</h4>
+        <h3 className="text-[28px] md:text-[30px] font-[400] text-[#406354]">
+          {title}
+        </h3>
+        <h4 className="text-[28px] my-4 md:text-[30px] font-[600] text-[#242424]">
+          {subTitle}
+        </h4>
         <p className="text-[16px] leading-[150%]">{description}</p>
       </div>
 
       {/* Buttons */}
-      
+
       <div className="flex flex-col gap-4">
-        <button
+        {/* <button
         className="
             inline-flex items-center justify-center
             gap-[10px]
@@ -53,8 +59,14 @@ export default function ProductCard({
           "
       >
         Read more
-      </button>
-        <button
+      </button> */}
+        <Button
+          btnText="Read more"
+          bgColor="bg-white"
+          textColor="text-black"
+        />
+        <Button btnText={btnText} bgColor="bg-[#242424]" textColor="text-white"/>
+        {/* <button
           className={`inline-flex items-center justify-center
             gap-[10px]
             px-[22px] py-[12px]
@@ -74,7 +86,7 @@ export default function ProductCard({
           md:group-hover:pointer-events-auto`}
         >
           {btnText}
-        </button>
+        </button> */}
       </div>
     </div>
   );
