@@ -48,45 +48,13 @@ export default function ProductCard({
       {/* Buttons */}
 
       <div className="flex flex-col gap-4">
-        {/* <button
-        className="
-            inline-flex items-center justify-center
-            gap-[10px]
-            px-[22px] py-[12px]
-            rounded-[6px]
-            bg-white
-            text-sm font-medium
-          "
-      >
-        Read more
-      </button> */}
+        
         <Button
           btnText="Read more"
           bgColor="bg-white"
           textColor="text-black"
         />
-        <Button btnText={btnText} bgColor="bg-[#242424]" textColor="text-white"/>
-        {/* <button
-          className={`inline-flex items-center justify-center
-            gap-[10px]
-            px-[22px] py-[12px]
-            rounded-[6px]
-            bg-[#242424]
-            text-white
-            text-sm font-medium
-            transition-all duration-300
-
-          ${
-            active
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          }
-
-          md:group-hover:opacity-100
-          md:group-hover:pointer-events-auto`}
-        >
-          {btnText}
-        </button> */}
+        <Button btnText={btnText} bgColor="bg-[#242424]" textColor="text-white" active={active}/>
       </div>
     </div>
   );
