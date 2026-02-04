@@ -14,7 +14,7 @@ const AchivmentComponent = () => {
 
   return (
     <section className="w-full px-3">
-      <h1 className="py-10 text-[43px] font-normal">
+      <h1 className="text-center p-8 md:px-28 text-[43px] md:text-[86px] font-normal">
         Our Road to Creating Data Ownership and Security
       </h1>
 

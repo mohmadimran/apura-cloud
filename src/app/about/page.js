@@ -4,7 +4,7 @@ import Button from "@/components/Button";
 
 export default function AboutEurope() {
   return (
-    <section className="bg-[#1f1f1f] rounded-[32px] p-20 flex justify-between items-center max-w-[1200px] mx-auto overflow-hidden my-20 md:my-32 lg:my-72">
+    <section className="bg-[#1f1f1f] rounded-[32px] p-20 flex justify-between items-center max-w-[1200px] mx-auto overflow-hidden my-20 md:my-32 lg:my-40">
       {/* LEFT */}
       <div className="max-w-[520px]">
         <span className="text-[14px] text-[#bdbdbd]">About us</span>
