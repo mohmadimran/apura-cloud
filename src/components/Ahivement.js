@@ -31,6 +31,10 @@ const AchivmentComponent = () => {
               className={`
                 group
                 p-6
+                w-full
+                flex
+                flex-col md:flex-row gap-16
+                justify-between
                 rounded-[16px]
                 transition-all
                 duration-300
@@ -39,16 +43,16 @@ const AchivmentComponent = () => {
                 md:hover:bg-[#F1FF66]
               `}
             >
-              <div className="flex justify-between items-center">
+              <div className="">
                 {/* Stage */}
                 <h2 className="text-[14px] font-semibold text-[#242424]">
                   {item.stage}
                 </h2>
 
                 {/* Status */}
-                <p className="mt-2 text-sm font-medium text-[#242424]">
+                {/* <p className="mt-2 text-sm font-medium text-[#242424]">
                   {isActive ? "Coming soon" : "In Pilot"}
-                </p>
+                </p> */}
               </div>
               {/* Title */}
               <h3 className="text-[22px] font-medium text-[#242424] mt-1">
@@ -61,29 +65,26 @@ const AchivmentComponent = () => {
               </p>
 
               {/* CTA */}
-              <div className="w-full flex justify-between items-center mt-6">
+              <div className="flex md:items-center gap-5 mt-6">
                 <button
-                  className="
+                  className={`${isActive ? "bg-[#F1FF66]" : "bg-transparent"}
                     relative
                     inline-flex
                     items-center
                     justify-center
                     px-[22px]
                     py-[12px]
-                    rounded-[6px]
-                    bg-[#242424]
-                    text-white
+                   
                     text-sm
                     overflow-hidden
-                  "
+                  `}
                 >
                   {/* Desktop hover text */}
-                  <span className="hidden md:inline transition-opacity duration-200 group-hover:opacity-0">
+                  {isActive ? <>  <span className="md:inline transition-opacity duration-200 group-hover:opacity-0 bg-transparent border-b-black">
                     Book demo
-                  </span>
-                  <span className="hidden md:inline absolute transition-opacity duration-200 opacity-0 group-hover:opacity-100">
+                  </span></> : <><span className="md:inline-block flex justify-center items-center  p-5 absolute transition-opacity duration-200 opacity-0 group-hover:opacity-100 rounded bg-white text-[#000000] text-[18px]">
                     Try it
-                  </span>
+                  </span></>}
 
                   {/* Mobile tap text */}
                   <span className="md:hidden">

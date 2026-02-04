@@ -32,7 +32,8 @@ const EmailSection = () => {
          font-normal
             text-[28px]
             leading-[110%]
-            text-left
+            md:text-left
+            text-center
           "
             >
               Join the future of data sovereignty
@@ -40,7 +41,7 @@ const EmailSection = () => {
           </div>
 
           {/* Email input */}
-          <div className="relative w-[399px]">
+          <div className="relative max-w-[399px]">
             <input
               type="email"
               placeholder="Enter your email"
