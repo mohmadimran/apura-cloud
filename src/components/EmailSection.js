@@ -40,29 +40,41 @@ const EmailSection = () => {
           </div>
 
           {/* Email input */}
-          <div
-            className="
-            min-w-[343px]
-            min-h-[49px]
-            rounded-[10px]
-            bg-[#EBEAE6]
-            flex
-            items-center
-            px-4
-          "
-          >
+          <div className="relative w-[399px]">
             <input
               type="email"
               placeholder="Enter your email"
               className="
-              w-full
-              bg-transparent
-              outline-none
-              font-radio
-              text-[14px]
-              placeholder:opacity-30
-            "
+      w-full
+      h-[49px]
+      bg-[#EBEAE6]
+      rounded-[10px]
+      px-4
+      pr-[95px]   
+      outline-none
+      font-radio
+      text-[14px]
+      placeholder:opacity-30
+    "
             />
+
+            <button
+              className="
+      absolute
+      top-[2px]
+      right-[2px]
+      w-[89px]
+      h-full
+      bg-[#FFFFFF4D]
+      rounded-[8px]
+      text-[14px]
+      inline-flex
+      items-center
+      justify-center
+    "
+            >
+              Join
+            </button>
           </div>
         </div>
         <div
