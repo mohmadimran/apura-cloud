@@ -30,11 +30,15 @@ const AchivmentComponent = () => {
               onClick={() => handleClick(index)}
               className={`
                 group
-                p-6
+                p-3
+                my-3
                 w-full
                 flex
-                flex-col md:flex-row gap-16
-                justify-between
+                flex-col md:flex-row md:gap-16
+                gap-3
+                justify-start
+                items-start
+                md:justify-between items-start
                 rounded-[16px]
                 transition-all
                 duration-300
@@ -43,74 +47,56 @@ const AchivmentComponent = () => {
                 md:hover:bg-[#F1FF66]
               `}
             >
-              <div className="">
-                {/* Stage */}
-                <h2 className="text-[14px] font-semibold text-[#242424]">
-                  {item.stage}
-                </h2>
+              {/* Stage */}
+              <h2 className="flex-1 text-[14px] font-semibold text-[#242424]">
+                {item.stage}
+              </h2>
 
-                {/* Status */}
-                {/* <p className="mt-2 text-sm font-medium text-[#242424]">
+              {/* Status */}
+              {/* <p className="mt-2 text-sm font-medium text-[#242424]">
                   {isActive ? "Coming soon" : "In Pilot"}
                 </p> */}
-              </div>
               {/* Title */}
-              <h3 className="text-[22px] font-medium text-[#242424] mt-1">
+              <h3 className="flex-1 text-[22px] font-medium text-[#242424] mt-1">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-[16px] leading-[150%] text-[#242424]/80 mt-3">
+              <p className="flex-1 text-[16px] leading-[150%] text-[#242424]/80">
                 {item.description}
               </p>
 
               {/* CTA */}
-              <div className="flex md:items-center gap-5 mt-6">
-                <button
-                  className={`${isActive ? "bg-[#F1FF66]" : "bg-transparent"}
-                    relative
-                    inline-flex
-                    items-center
-                    justify-center
-                    px-[22px]
-                    py-[12px]
-                   
-                    text-sm
-                    overflow-hidden
-                  `}
-                >
-                  {/* Desktop hover text */}
-                  {isActive ? <>  <span className="md:inline transition-opacity duration-200 group-hover:opacity-0 bg-transparent border-b-black">
-                    Book demo
-                  </span></> : <><span className="md:inline-block flex justify-center items-center  p-5 absolute transition-opacity duration-200 opacity-0 group-hover:opacity-100 rounded bg-white text-[#000000] text-[18px]">
-                    Try it
-                  </span></>}
+              <div className="flex flex-1 w-full justify-between items-center gap-3">
+                <div>
+                  {isActive ? (
+                    <button className="inline-flex items-center justify-center px-5 py-2 transition-opacity duration-200 group-hover:opacity-100 rounded bg-white text-black text-[18px]">
+                      Try It
+                    </button>
+                  ) : (
+                    <button className="bg-transparent inline-flex items-center justify-center px-[22px] py-[12px] border border-black rounded text-sm overflow-hidden">
+                      Book Demo
+                    </button>
+                  )}
+                </div>
 
-                  {/* Mobile tap text */}
-                  <span className="md:hidden">
-                    {isActive ? "Try it" : "Book demo"}
-                  </span>
-                </button>
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-                  />
-                </svg>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </div>
               </div>
-
-              {index !== achievementsData.length - 1 && (
-                <hr className="mt-8 border-[#242424]/20" />
-              )}
             </div>
           );
         })}
